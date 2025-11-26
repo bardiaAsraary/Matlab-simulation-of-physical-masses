@@ -23,14 +23,9 @@ The system is strongly overdamped, primarily due to the high damping coefficient
 
 ## ⚙️ System Description
 
-A force 
-𝑓
-(
-𝑡
-)
-f(t) is applied to Mass 2, while Mass 1 is attached to ground with heavy damping.
+A force f(t) is applied to Mass 2, while Mass 1 is attached to ground with heavy damping.
 The physical parameters are:
-
+```
 Parameter	Value	Description
 M₁	1 kg	Mass 1
 M₂	5 kg	Mass 2
@@ -38,106 +33,9 @@ B₁	50 Ns/m	Ground damping (large)
 B₂	1 Ns/m	Coupling damping
 K	100 N/m	Spring constant
 Governing Equations
-𝑀
-1
-𝑥
-¨
-+
-(
-𝐵
-1
-+
-𝐵
-2
-)
-𝑥
-˙
-+
-𝐾
-𝑥
-=
-𝐵
-2
-𝑦
-˙
-+
-𝐾
-𝑦
-M
-1
-	​
-
-x
-¨
-+(B
-1
-	​
-
-+B
-2
-	​
-
-)
-x
-˙
-+Kx=B
-2
-	​
-
-y
-˙
-	​
-
-+Ky
-𝑀
-2
-𝑦
-¨
-+
-𝐵
-2
-𝑦
-˙
-+
-𝐾
-𝑦
-=
-𝐵
-2
-𝑥
-˙
-+
-𝐾
-𝑥
-+
-𝑓
-(
-𝑡
-)
-M
-2
-	​
-
-y
-¨
-	​
-
-+B
-2
-	​
-
-y
-˙
-	​
-
-+Ky=B
-2
-	​
-
-x
-˙
-+Kx+f(t)
-
+M1​x¨+(B1​+B2​)x˙+Kx=B2​y˙​+Ky
+M2​y¨​+B2​y˙​+Ky=B2​x˙+Kx+f(t)
+```
 These equations are implemented in Simulink.
 
 ## 🛠️ Task 1 — Simulink Simulation
