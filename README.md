@@ -25,13 +25,15 @@ The system is strongly overdamped, primarily due to the high damping coefficient
 
 A force f(t) is applied to Mass 2, while Mass 1 is attached to ground with heavy damping.
 The physical parameters are:
+
+| Parameter | Symbol | Value | Unit | Description |
+|----------|--------|--------|------|-------------|
+| Mass 1 | M₁ | **1** | kg | Left mass connected to ground |
+| Mass 2 | M₂ | **5** | kg | Right mass driven by external force |
+| Damping (ground) | B₁ | **50** | Ns/m | Strong damping on Mass 1 |
+| Damping (coupling) | B₂ | **1** | Ns/m | Viscous coupling between the masses |
+| Spring constant | K | **100** | N/m | Spring connecting the two masses |
 ```
-Parameter	Value	Description
-M₁	1 kg	Mass 1
-M₂	5 kg	Mass 2
-B₁	50 Ns/m	Ground damping (large)
-B₂	1 Ns/m	Coupling damping
-K	100 N/m	Spring constant
 Governing Equations
 M1​x¨+(B1​+B2​)x˙+Kx=B2​y˙​+Ky
 M2​y¨​+B2​y˙​+Ky=B2​x˙+Kx+f(t)
